@@ -1,0 +1,130 @@
+        html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 2em;
+        padding: 0;
+    }
+    
+    header {
+        display: block;
+        unicode-bidi: isolate;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .button {
+        color: white;
+        background-color: green;
+        border-radius: 5px;
+        width: 6em;
+        padding: 0.5em;
+        text-align: center;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 2rem;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    .nav__list {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav__logo {
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .nav__link {
+        color: #2925259c;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        transition: color 0.3s ease;
+    }
+    
+    .home__img {
+        size: 3em;
+    }
+    /* Tablet */
+    
+    @media (max-width: 1024px) and (min-width: 768px) {
+        .nav__menu ul {
+            gap: 0.5rem;
+        }
+        .section {
+            padding: 2rem;
+        }
+        .home__img {
+            width: 100%;
+            height: auto;
+        }
+        .menu__box {
+            width: 48%;
+        }
+    }
+    
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    /* Mobile  */
+    
+    @media (max-width: 768px) {
+        .nav {
+            flex-direction: column;
+        }
+        .nav__list {
+            display: none;
+            .nav__menu {
+                display: none;
+            }
+            .nav__toggle {
+                display: block;
+            }
+            .home__data {
+                text-align: center;
+            }
+            .section {
+                padding: 1rem;
+            }
+            .menu__box {
+                width: 100%;
+            }
+            .footer__container {
+                flex-direction: column;
+            }
+        }
